@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ subject_name }}</title>
+</head>
+<body>
+    {% if not students %}
+        <h2>Нет оценок.</h2>
+    {% endif %}
+    <div>
+        {% for student in students %}
+            <p>Студент:</p>
+            Имя: {{ student.name }}<br>
+            Фамилия: {{ student.surname }}<br>
+            Оценка: {{ student.mark }}<br>
+        {% endfor %}
+    </div>
+</body>
+</html>

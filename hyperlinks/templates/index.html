@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    {% for sbj in subjects %}
+        <a href="{% url 'object_info' subject_id=sbj.id %}">{{ sbj.title }}</a><br>
+    {% endfor %}
+</body>
+</html>
